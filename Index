@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+   <style>
+      body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+          margin: 50px;
+          background: black
+          background-image: linear-gradient(to bottom , )
+      }
+
+
+      button {
+          padding: 10px 20px;
+          font-size: 16px;
+          cursor: pointer;
+          border: none;
+         border-radius: 10%; 
+      }
+
+      #result {
+          margin-top: 20px;
+          font-size: 18px;
+      }
+
+
+  </style>
+
+</head>
+
+<body>
+   <div>
+      <h1>Час</h1>
+      <button onclick="first()">Дізнатися час</button>
+      <div id="result"></div>
+
+      <button id="top" onclick="colorBack()">фон</button>
+
+      <script>
+
+
+function colorBack() {
+   var colors = ['red', 'blue', 'green'];
+   var randomColor = colors[Math.floor(Math.random() * colors.length)];
+   $('body').css('background-color', randomColor);
+}
+
+            function first() {
+            $('body').append('<p>' + 'Секунди у годині: '  +  secondsInAnHour() + '</p>')
+            $('body').append('<p>' + 'Секунди у дні: '  + secondsInADay() + '</p>')
+            $('body').append('<p>' + 'Секунди у тижні: '  +  secondsInAWeek() + '</p>')
+            $('body').append('<p>' + 'Секунди у місяці: '  + secondsInAMonth()  + '</p>')
+            $('body').append('<p>' + 'Секунди у році: '  +  secondsInAYear() + '</p>')
+            $('body').append('<p>' + 'Секунди у столітті: '  + secondsInACentury()  + '</p>')
+            $('body').append('<p>' + 'Секунди у тисячолітті: '  +  secondsInAMillenium() + '</p>')
+            $('body').append('<p>' + 'Хвилини у годині: '  + minutesInAnHour()  + '</p>')
+            $('body').append('<p>' + 'Хвилини у дні: '  +  minutesInADay() + '</p>')
+            $('body').append('<p>' + 'Хвилини у тижні: '  +  minutesInAWeek() + '</p>')
+            $('body').append('<p>' + 'Хвилини у місяці: '  + minutesInAMonth()  + '</p>')
+            $('body').append('<p>' + 'Хвилини у році: '  +  minutesInAYear() + '</p>')
+            $('body').append('<p>' + 'Хвилини у столітті: '  +  minutesInACentury() + '</p>')
+            $('body').append('<p>' + 'Хвилини у тисячолітті: '  +  minutesInAMillenium() + '</p>')
+            $('body').append('<p>' + 'Години у дні: '  +  hoursInADay() + '</p>')
+            $('body').append('<p>' + 'Години у тижні: '  +  hoursInAWeek() + '</p>')
+            $('body').append('<p>' + 'Години у місяці: '  +  hoursInAMonth() + '</p>')
+            $('body').append('<p>' + 'Години у році: '  + hoursInAYear()  + '</p>')
+            $('body').append('<p>' + 'Години у столітті: '  +  hoursInACentury() + '</p>')
+            $('body').append('<p>' + 'Години у тисячолітті: '  +  hoursInAMillenium() + '</p>')
+
+            
+         
+
+         };
+
+         
+
+    
+
+
+         
+         
+
+
+
+       
+
+
+         function secondsInAnHour() {
+            var secondsInAMinute = 60;
+            var minutesInAnHour = 60;
+            return secondsInAMinute * minutesInAnHour;
+         }
+
+         function secondsInADay() {
+            var hoursInADay = 24;
+            return secondsInAnHour() * hoursInADay;
+         }
+
+         function secondsInAWeek() {
+            var daysInAWeek = 7;
+            return secondsInADay() * daysInAWeek;
+         }
+
+         function secondsInAMonth() {
+            var daysInAMonth = 31;
+            return secondsInADay() * daysInAMonth;
+         }
+
+         function secondsInAYear() {
+            var daysInAYear = 365;
+            return secondsInADay() * daysInAYear;
+         }
+
+         function secondsInACentury() {
+            var yearsInACentury = 100;
+            return secondsInAYear() * yearsInACentury;
+         }
+
+         function secondsInAMillenium() {
+            var yearsInAMillenium = 1000;
+            return secondsInAYear() * yearsInAMillenium;
+         }
+
+         function minutesInAnHour() {
+            var minutes = 60;
+            return minutes * 1;
+         }
+
+         function minutesInADay() {
+            var hoursInAday = 24;
+            return minutesInAnHour() * hoursInAday;
+         }
+
+         function minutesInAWeek() {
+            var daysInAWeek = 7;
+            return minutesInADay() * daysInAWeek;
+         }
+
+function minutesInAMonth() {
+            var daysInAMonth = 30;
+            return minutesInADay() * daysInAMonth;
+         }
+
+         function minutesInAYear() {
+            var daysInAYear = 365;
+            return minutesInADay() * daysInAYear;
+         }
+
+         function minutesInACentury() {
+            var yearsInACentury = 100;
+            return minutesInAYear() * yearsInACentury;
+         }
+
+         function minutesInAMillenium() {
+            var yearsInAMillenium = 1000;
+            return minutesInAYear() * yearsInAMillenium;
+         }
+
+         function hoursInADay() {
+            var hours = 24
+            return hours
+         }
+
+         function hoursInAWeek() {
+            var daysInAWeek = 7
+            return daysInAWeek * hoursInADay()
+         }
+
+         function hoursInAMonth() {
+            var daysInAMonth = 30;
+            return hoursInADay() * daysInAMonth
+         }
+
+         function hoursInAYear() {
+            var daysInAYear = 365;
+            return daysInAYear * hoursInADay()
+         }
+
+         function hoursInACentury(params) {
+            var yearsInCentury = 100
+            return hoursInAYear() * yearsInCentury;
+         }
+
+         function hoursInAMillenium(params) {
+            var yearsInAMillenium = 1000;
+            return hoursInAYear() * yearsInAMillenium
+         }
+
+      </script>
+   </div>
+</body>
+
+</html>
